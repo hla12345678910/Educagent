@@ -1,0 +1,26 @@
+<html>
+  	<head>
+	    <title>RPs</title>
+
+		<script src="js/jquery.js"></script>
+
+	</head>
+
+	<body>
+	<span>Hi</span>
+	<script>
+		alert($("span").html());
+		$(document).ready(function(){
+			$.getJSON("data.js",function(result){
+				var build = ""
+				for(pos = 0; pos < result.data.length;pos++)
+					build += result.data[pos].name + "<br/>"
+				$("span").html(build);
+			})
+
+
+		})
+	</script>
+
+	</body>
+</html>
